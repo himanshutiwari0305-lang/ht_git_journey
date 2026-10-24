@@ -1,0 +1,116 @@
+✅ Python Practice Recap — Tuples, Dictionaries, and Sets
+🧱 Tuples
+Tuple is like a list but immutable (cannot be changed after creation).
+
+Syntax:
+employee = ('Himanshu', 42, 'Noida')
+
+Tuple unpacking:
+name, city, age = employee
+
+For single element tuple: use comma — ('Himanshu',)
+
+List of Tuples (recommended for multiple records):
+
+employees = [
+    ('Himanshu', 42, 'Noida'),
+    ('Neha', 30, 'Delhi')
+]
+You can append or remove tuples from the list.
+
+You cannot modify an element inside the tuple directly.
+
+🧩 Dictionaries
+Store data as key-value pairs
+
+employee = {"name": "Himanshu", "age": 42, "city": "Noida"}
+Operations:
+
+Access: employee["name"], or safely employee.get("name")
+
+Add/update: employee["department"] = "HR"
+
+Delete: del employee["city"]
+
+Loop:
+
+for key, value in employee.items():
+    print(key, value)
+Extra:
+
+employee.keys() → all keys
+
+employee.values() → all values
+
+.get("key", "default") → avoid KeyError
+
+Real-world usage:
+
+List of dictionaries → best for multiple records
+
+Works well with JSON, APIs, config files, etc.
+
+🔁 Sets
+Unordered collection with unique values
+
+Syntax: {1, 2, 3} or set([1, 2, 3, 3])
+
+Automatically removes duplicates
+
+Operations:
+
+Add: my_set.add(5)
+
+Remove (safe): my_set.discard(6)
+
+Check if value exists: if 3 in my_set:
+
+Set math:
+
+python
+Copy
+Edit
+a = {1, 2, 3}
+b = {3, 4, 5}
+a.union(b)         # {1, 2, 3, 4, 5}
+a.intersection(b)  # {3}
+a.difference(b)    # {1, 2}
+Use case:
+
+Remove duplicates from a list:
+list(set(my_list))
+
+Compare datasets for new or missing records
+
+🏁 Final Verdict
+
+Topic		Status		Purpose
+Tuples		✅ Done	For 	fixed-length structured data
+Dictionaries	✅ Done	For 	key-value records, JSON-style objects
+Sets		✅ Done	For 	filtering, deduplication, and comparison
+
+
+Python - Set Methods
+Python has a set of built-in methods that you can use on sets.
+
+Method				Shortcut	Description
+add()	 					Adds an element to the set
+clear()	 					Removes all the elements from the set
+copy()	 					Returns a copy of the set
+difference()			-		Returns a set containing the difference between two or more sets
+difference_update()		-=		Removes the items in this set that are also included in another, specified set
+discard()	 				Remove the specified item
+intersection()			&		Returns a set, that is the intersection of two other sets
+intersection_update()		&=		Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()	 				Returns whether two sets have a intersection or not
+issubset()			<=		Returns whether another set contains this set or not
+ 				<		Returns whether all items in this set is present in other, specified set(s)
+issuperset()			>=		Returns whether this set contains another set or not
+ 				>		Returns whether all items in other, specified set(s) is present in this set
+pop()	 					Removes an element from the set
+remove()	 				Removes the specified element
+symmetric_difference()		^		Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	^=		Inserts the symmetric differences from this set and another
+union()				|		Return a set containing the union of sets
+update()			|=		Update the set with the union of this set and others
+🎯 You’re now fully ready for data-centric scripting and Python usage in your current and next roles.

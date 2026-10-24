@@ -1,0 +1,30 @@
+# Python cache
+
+**pycache**/
+*.py[cod]
+
+# Virtual environments
+
+.venv/
+venv/
+
+# Temporary Microsoft Office files
+
+~$*.docx
+~$*.xlsx
+~$*.xls
+~$*.pptx
+
+# Environment variables and secrets
+
+.env
+.env.*
+
+# Test cache
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary Office files
+~$*

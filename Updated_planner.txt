@@ -1,0 +1,99 @@
+**8-Week Career-Focused Learning Planner for PL/SQL Developer Transitioning to Data & Cloud Roles**
+
+**Background**:
+- Total Experience: 14 years
+- PL/SQL Experience: 6 years
+- Goal: Transition to data engineering/cloud/data-focused roles
+- Technologies to focus on: Python, Hive, AWS (RDS, S3, EC2), SQL, Big Data Tools
+
+---
+
+### Phase 1: Python Foundation (Week 1-2)
+
+**Week 1 – Python Basics**
+- Day 1: Python Setup, Variables, Data Types
+- Day 2: If-Else, Loops
+- Day 3: Functions, Lists, Tuples
+- Day 4: Dictionaries, Sets
+- Day 5: File Handling (Reading/Writing CSV, Text)
+- Day 6: Pandas Basics (Read/Write CSV, DataFrames)
+- Day 7: Practice + Mini Project (Data Cleaning or Simple Script)
+
+**Week 2 – Intermediate Python**
+- Day 1: List Comprehensions, Slicing
+- Day 2: Error Handling (try-except), Assertions
+- Day 3: Basic OOP (Classes, Objects, Constructors)
+- Day 4: Working with Excel using Pandas
+- Day 5: JSON & APIs in Python
+- Day 6: SQL with Python (SQLAlchemy or SQLite)
+- Day 7: Practice Mini ETL Script (CSV → Transform → New File)
+
+---
+
+### Phase 2: Data & Hive Integration (Week 3-4)
+
+**Week 3 – Hive Fundamentals**
+- Day 1: Hadoop & Hive Overview
+- Day 2: Hive DDL – Create, Drop, Partition
+- Day 3: Hive DML – Insert, Select, Update
+- Day 4: Hive Joins, Functions
+- Day 5: Partitioning & Bucketing
+- Day 6: Hive CLI vs Beeline (Hands-On)
+- Day 7: Practice with Large CSVs (Kaggle)
+
+**Week 4 – Python + Hive Integration**
+- Day 1: Connect Python to Hive using PyHive
+- Day 2: Read/Write Hive Tables from Python
+- Day 3: Mini ETL: Clean CSV in Python → Insert to Hive
+- Day 4: Write Hive Query Results to File using Python
+- Day 5: Automation Concepts (Simple Workflow)
+- Day 6-7: Review + Mini Project (Reporting/Audit Pipeline)
+
+---
+
+### Phase 3: Cloud Integration & AWS RDS (Week 5-6)
+
+**Week 5 – Cloud Essentials with Python**
+- Day 1: AWS Free Tier Setup, IAM Users/Roles
+- Day 2: EC2 Basics, SSH, Instance Management
+- Day 3: S3 Buckets – Upload/Download via Boto3
+- Day 4: Automate File Upload to S3 via Python
+- Day 5: Basic Cloud Architecture for ETL Pipelines
+- Day 6-7: Project: Local File → Upload to S3 via Python
+
+**Week 6 – AWS RDS with SQL & Python**
+- Day 1: Create RDS (MySQL/PostgreSQL), Security Groups
+- Day 2: Connect to RDS using DBeaver & Python (psycopg2/MySQL connector)
+- Day 3: Automate Data Insert into RDS
+- Day 4: Backup, Restore, Basic Monitoring
+- Day 5: Practice ETL: CSV → Clean with Python → Load to RDS
+- Day 6-7: Review + Mini RDS Project
+
+---
+
+### Phase 4: Real World Projects & Optional Tools (Week 7-8)
+
+**Week 7 – Final Project: CSV to Data Lake to DB**
+- Day 1-3: Full Pipeline Project – CSV → Python Clean → Hive or RDS
+- Day 4: Basic Dashboard using SQL Queries or Pandas
+- Day 5: Logging, Error Handling, Email Alerts (Optional)
+- Day 6-7: Finalize and Document Code on GitHub
+
+**Week 8 – Optional Learning + Portfolio Building**
+- Day 1: Intro to PySpark – RDDs and DataFrames
+- Day 2: Explore AWS Athena (query S3 data like Hive)
+- Day 3: Intro to Airflow (basic DAG concept)
+- Day 4: Write Blog or Notes on Learning
+- Day 5-7: Final Review + GitHub Updates + Resume Update
+
+---
+
+**Final Skills Gained:**
+- Python Programming for Data
+- Data Processing with Pandas
+- Hive & Big Data Querying
+- AWS (S3, RDS, EC2, IAM)
+- Real World ETL Pipelines
+- SQL + Cloud Integration
+- GitHub Portfolio for Job Search
+

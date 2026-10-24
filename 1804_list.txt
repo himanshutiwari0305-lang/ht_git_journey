@@ -1,0 +1,93 @@
+Python Lists - Full Practice Recap with Explanation (Hindi + Code)
+✅ Concepts Covered:
+List creation and slicing (data[1:] to skip header)
+
+List of lists (2D list) - representing tabular data
+
+Accessing elements using index (x[0], x[1])
+
+Looping through lists
+
+Filtering data using list comprehension
+
+Calculating average values from list data
+
+Creating a new list with modified values
+
+Safe data validation using len(x), isinstance(), .isdigit()
+
+Difference between x[0] and print(x[0])
+
+Comments in Python - single line and multi-line
+
+❓ Key Questions Answered:
+Q: x[0] means "list empty na ho"?
+A: Nahi. x[0] ka matlab hota hai: list ka pehla element.
+Agar list khali ho ([]) to x[0] se error aayega (IndexError).
+List empty check karne ke liye: if x ya if len(x) > 0 use karo.
+
+Q: print(x[0]) vs x[0] ka kya difference hai?
+A:
+
+x[0] value ko memory mein access karta hai
+
+print(x[0]) us value ko screen pe dikhata hai
+Agar aap x[0] likhte ho bina print ke, to kuch output nahi aayega.
+
+Q: isdigit() error kyun aaya?
+A:
+Jab value already int hoti hai (30), tab uspe .isdigit() nahi chalega
+Kyunki .isdigit() sirf string pe chalta hai.
+Safe way:
+
+if isinstance(x[1], str) and x[1].isdigit():
+🚀 Final Project: Employee Data Cleaner
+
+employees = [
+    ['Name', 'Age'],
+    ['Amit', 30],
+    ['', 28],
+    ['Raj'],
+    ['Sita', 32],
+    ['Ravi', 25],
+    ['Neha', ''],
+    ['Meena', '30'],
+    ['Sameer', None]
+]
+🔹 Step 1: Galat rows hataana (jisme name ya age missing ho)
+python
+Copy
+Edit
+cleaned = [
+    x for x in employees[1:]
+    if len(x) == 2 and x[0] and (
+        isinstance(x[1], int) or (isinstance(x[1], str) and x[1].isdigit())
+    )
+]
+🔹 Step 2: Age ko int mein convert karna
+python
+Copy
+Edit
+cleaned = [[x[0], int(x[1])] for x in cleaned]
+🔹 Step 3: Average age nikalna
+
+total_age = sum(x[1] for x in cleaned)
+count = len(cleaned)
+average_age = total_age / count
+print("Average Age:", average_age)
+🔹 Step 4: Age +1 karke naya list banana
+
+updated = [[x[0], x[1] + 1] for x in cleaned]
+🔹 Step 5: Print karo un logon ke naam jinki age (after +1) > 30
+
+for x in updated:
+    if x[1] > 30:
+        print(x[0])
+📌 Important Checks Recap:
+x[0] → name hona chahiye (empty string nahi)
+
+len(x) == 2 → row mein sirf 2 values ho
+
+x[1] → ya to int ho, ya string jo number ho
+
+print(x[0]) se hi value screen pe dikhegi

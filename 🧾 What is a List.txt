@@ -1,0 +1,142 @@
+🧾 What is a List?
+List is:
+	A collection of items:	List items are indexed, the first item has index [0], the second item has index [1] etc.
+	Ordered:		it means that the items have a defined order, and that order will not change.(There are some list methods that will change 				the order, but in general: the order of the items will not change.)
+	Changeable (mutable):	meaning that we can change, add, and remove items in a list after it has been created.
+	Allows duplicates:	Since lists are indexed, lists can have items with the same value:
+				Example
+					Lists allow duplicate values:
+						thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+						print(thislist)
+
+Why Use Lists?
+	Jab aapko multiple values store karni ho ek variable mein.
+	Jab aapko loop karke values access, modify, ya process karni ho.
+	Jab aap file ya database se bulk data le rahe ho.
+
+Python has a set of built-in methods that you can use on lists.
+
+Method		Description
+append()	Adds an element at the end of the list
+clear()		Removes all the elements from the list
+copy()		Returns a copy of the list
+count()		Returns the number of elements with the specified value
+extend()	Adds the elements of a list (or any iterable) to the end of the current list
+index()		Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()		Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()		Sorts the list
+
+Lists are used to store multiple items in a single variable.
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+Lists are created using square brackets:
+	thislist = ["apple", "banana", "cherry"]
+	print(thislist)
+
+📘 List Syntax
+	
+	my_list = [10, 20, 30, 40]
+	List can store:
+
+	Numbers → [1, 2, 3]
+	Strings → ["apple", "banana"]
+	Mixed types → [1, "hello", 3.5]
+
+🛠️ Common List Operations:
+Operation		Code Example				Output
+Create list		fruits = ["apple", "banana"]		['apple', 'banana']
+Access item		fruits[0]				'apple'
+Change item		fruits[1] = "mango"			['apple', 'mango']
+Append item		fruits.append("kiwi")			['apple', 'banana', 'kiwi']
+Remove item		fruits.remove("banana")			['apple']
+Length of list		len(fruits)				2
+Loop through list	for x in fruits: print(x)		apple\nbanana
+Slice	fruits[1:3]						items from index 1 to 2
+
+✅ Task for You (Mini Practice)
+Create a file list_task1.py and write:
+
+def main():
+    numbers = [10, 20, 30, 40, 50]
+    print("Original List:", numbers)
+
+    numbers.append(60)
+    print("After Append:", numbers)
+
+    numbers[2] = 300
+    print("After Update:", numbers)
+
+    numbers.remove(20)
+    print("After Removing 20:", numbers)
+
+    print("List Length:", len(numbers))
+
+if __name__ == "__main__":
+    main()
+
+
+name, age = ['Amit', 30]
+print(name)  # Amit
+
+
+data = [
+    ['Name', 'Age'],
+    ['Amit', 30],
+    ['Neha', 28],
+    ['Raj', 35]
+]
+
+data[0] hai ['Name', 'Age']--es may dono element kaise?
+
+data[1][0] hai 'Amit'-- es par amit kaise?
+
+data[2][1] hai 28-- espar 28 kaise?
+
+data ko dhyan se dekhein:
+python
+Copy
+Edit
+data = [
+    ['Name', 'Age'],   # Index 0
+    ['Amit', 30],      # Index 1
+    ['Neha', 28],      # Index 2
+    ['Raj', 35]        # Index 3
+]
+Yeh ek list of lists hai. Har ek item (row) ek chhoti list hai. Aur Python mein indexing 0 se start hoti hai.
+
+📌 Breakdown:
+✅ data[0]:
+Yeh pehla element hai data list ka.
+
+data[0] = ['Name', 'Age']
+(Yeh header row hai — jaise column ka naam: "Name" aur "Age")
+
+✅ data[1][0]:
+data[1] = ['Amit', 30]
+(yeh dusra row hai — ek chhoti list jisme 'Amit' aur 30 hai)
+
+data[1][0] = 'Amit'
+(Iska matlab hai: data list ke dusre row ke pehle item ko access karo)
+
+✅ data[2][1]:
+data[2] = ['Neha', 28]
+(teesra row, jisme 'Neha' aur 28 hai)
+
+data[2][1] = 28
+(Yaani teesre row ke dusre element ko access kiya)
+
+📊 Visual Sochne ka Tarika (Table Format):
+
+Index	Value
+0	['Name', 'Age']
+1	['Amit', 30]
+2	['Neha', 28]
+3	['Raj', 35]
+Aur har ek row ke andar:
+
+
+Sub-Index	Value
+0	Name
+1	Age

@@ -1,0 +1,58 @@
+📂 1. File Handling in Python – Basics
+	Python allows you to:
+		Read files (.txt, .csv, .log, etc.)
+		Write to new files
+		Append data to existing files
+
+🔧 File Modes:
+
+Mode		Purpose
+'r'		Read (default)
+'w'		Write (overwrite)
+'a'		Append (add to end)
+'x'		Create a file(error if file exists)
+'rb'/'wb'	Binary read/write
+
+Reading a CSV File:
+
+with open("employee.csv", "r") as file:#with option will close the file automatically, 
+    content = file.read()
+    print(content)
+
+OUTPUT: ï»¿name,age,city
+himanshu,43,noida
+rekha,30,noida
+mumm,50,delhi
+
+now to remove special character like ï»¿ in csv, we can use 
+
+with open("employee.csv", "r", encoding="utf-8-sig") as file:
+
+always Add rows using .append() or inside the full list
+**********************************************************************************************
+What is the meaning of read a CSV file using dictionary-style rows in Python?
+Python में जब आप CSV फाइल को dictionary-style rows में पढ़ते हैं, तो हर row को एक dictionary के रूप में represent किया जाता है। मतलब, हर row में column headers (keys) और उनके corresponding values को dictionary format में access कर सकते हैं।
+For Example if you have CSV:
+Name, Age, City
+Himanshu, 35, Dadri
+Amit, 30, Delhi
+
+
+तो dictionary-style में पढ़ने पर, हर row कुछ ऐसा दिखेगा:
+{"Name": "Himanshu", "Age": "35", "City": "Dadri"}
+{"Name": "Amit", "Age": "30", "City": "Delhi"}
+
+
+आप इसे Python में csv.DictReader का इस्तेमाल करके कर सकते हैं:
+import csv
+
+# CSV फाइल को dictionary-style rows में पढ़ना
+with open("example.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row)  # Output हर row को dictionary की तरह दिखाएगा
+
+
+इसका फायदा ये है कि आप column headers के नाम से data को आसानी से access कर सकते हैं।
+उदाहरण: row["Name"] से आप हर व्यक्ति का नाम निकाल सकते हैं।
+

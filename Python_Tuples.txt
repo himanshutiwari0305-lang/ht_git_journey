@@ -1,0 +1,83 @@
+Python Tuples
+	Tuples are used to store multiple items in a single variable.
+	Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different 	qualities and usage.	A tuple is a collection which is ordered and unchangeable.
+Tuples are written with round brackets.
+
+Syntax: thistuple = ("apple", "banana", "cherry")
+	    print(thistuple)
+
+Python Collections (Arrays)
+	There are four collection data types in the Python programming language:
+		1) List is a collection which is ordered and changeable. Allows duplicate members.
+		2) Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+		3) Set is a collection which is unordered, unchangeable, and unindexed. No duplicate  members.(Set items are unchangeable, but you can remove and/or add items whenever you like.)
+		4) Dictionary is a collection which is ordered and changeable. No duplicate members.
+
+
+Feature 	| Tuple 				 | List
+Mutable 	| ❌ (Change nahi hota) 		 | ✅ (Change hota hai)
+Performance 	| ✅ Faster than list 			 | Slow
+Use case 	| Fixed data (e.g., coordinates, config) | Dynamic data
+
+Unpacking a Tuple
+When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
+Example: Packing a tuple:
+
+fruits = ("apple", "banana", "cherry")
+
+But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking":
+
+Example
+Unpacking a tuple:
+
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+Output: apple
+	banana
+	cherry
+Note: The number of variables must match the number of values in the tuple, if not, you must use an asterisk to collect the remaining values as a list.
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+Output: apple
+	banana
+	['cherry', 'strawberry', 'raspberry']
+
+One More tuple Sample:
+fruits = ('apple', 'banana', 'cherry', 'mango')
+(x, *y, z) = fruits
+print(y)
+
+Output :['banana', 'cherry']
+
+Now question is If I can store multiple values in a single tuple?
+Yes — ek hi tuple mein multiple records store kar sakte hain using nested tuples.
+Example mention in my_fist_tuples.py
+
+Lekin Limitation:
+Aap .append() ya .remove() nahi kar sakte
+Immutable hone ke kaaran add/delete sirf naye tuple banakar hi karna padega
+
+List allows flexibility
+Tuple inside gives structure
+
+Best way to use nested tuple is to use inside a list
+employees = [
+    ('Himanshu', 42, 'Noida'),
+    ('Neha', 30, 'Delhi'),
+    ('Amit', 35, 'Gurgaon')
+]
+here we can made changes in the list using append() or remove(), but the structure of tuple wont change, If we want we can remove entire tuple if needed
+
