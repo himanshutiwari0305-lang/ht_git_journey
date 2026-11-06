@@ -1,30 +1,34 @@
 import psycopg2
-from db_connection import connect_to_postgresql # Import the connect_to_postgresql function from the db_connection module. This function is responsible for establishing a connection to the PostgreSQL database using the provided credentials.
+import employee_crud as crud
 
-connection = None
+def ask_salary():
+    while True:
+        try:
+            return float(input("Salary: "))
+        except ValueError:
+            print("Please enter a number.")
 
-try:
-    # Get database connection
-    connection = connect_to_postgresql()
+def main():
+    action = input("1=add 2=update 3=delete 4=search: ").strip()
+    try:
+        if action == "1":
+            crud.add_employee(input("Name: "), input("Department: "), ask_salary(),
+                              input("City: "), input("Joining date (YYYY-MM-DD): "))
+            print("Employee added.")
+        elif action == "2":
+            print("Updated." if crud.update_salary(input("Name: "), ask_salary()) else "Employee not found.")
+        elif action == "3":
+            print("Deleted." if crud.delete_employee(input("Name: ")) else "Employee not found.")
+        elif action == "4":
+            print(crud.find_employees(input("Department: "), input("Name: ")) or "No matching records found.")
+    #except OperationalError:
+    #    log.exception("Database unavailable")          # retry-worthy
+    #except IntegrityError:
+    #    log.exception("Row rejected by a constraint")  # data problem, don't retry
+    #except DataError:
+    #    log.exception("Bad value, e.g. wrong date format")
+    except ValueError as e:
+        print(e)
 
-    # Create cursor
-    with connection.cursor() as cursor:
-
-        # Execute SQL query
-        cursor.execute(
-            "SELECT current_database(), current_user;"
-        )
-
-        # Fetch result
-        result = cursor.fetchone()
-
-        print("Database:", result[0])
-        print("User:", result[1])
-
-except psycopg2.Error as error:
-    print("SQL execution failed:", error)
-
-finally:
-    if connection is not None:
-        connection.close()
-        print("Connection closed.")
+if __name__ == "__main__":
+    main()
