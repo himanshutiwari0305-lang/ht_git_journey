@@ -1,4 +1,51 @@
-﻿name,age,city
-himanshu,43,noida
-rekha,30,noida
-mumm,50,delhi
+employee_name,department,salary,city,joining_date
+Himanshu Sharma,Engineering,78000,Noida,2022-04-18
+Rekha Verma,Human Resources,62000,Noida,2021-09-06
+Mummy Singh,Finance,71000,Delhi,2020-02-11
+Aarav Mehta,Engineering,85000,Bengaluru,2023-01-16
+Ananya Rao,Marketing,68000,Hyderabad,2022-07-04
+Vivaan Gupta,Sales,59000,Delhi,2024-03-12
+Diya Nair,Product,92000,Bengaluru,2021-11-22
+Aditya Joshi,Operations,64000,Pune,2020-08-03
+Isha Kapoor,Engineering,81000,Noida,2023-06-19
+Arjun Reddy,Finance,73000,Hyderabad,2019-12-09
+Saanvi Iyer,Human Resources,66000,Chennai,2022-10-10
+Reyansh Malhotra,Sales,61000,Mumbai,2021-05-17
+Myra Desai,Marketing,70000,Ahmedabad,2024-01-08
+Krishna Menon,Operations,67500,Kochi,2020-06-15
+Pari Chawla,Product,88000,Gurugram,2023-09-25
+Atharv Sinha,Engineering,79000,Noida,2022-02-14
+Anika Bose,Finance,74000,Kolkata,2019-07-29
+Kabir Shah,Sales,63000,Ahmedabad,2021-10-04
+Sara Thomas,Marketing,71500,Kochi,2023-04-03
+Dhruv Bhatia,Operations,65500,Delhi,2020-11-16
+Navya Kulkarni,Engineering,83500,Pune,2022-08-08
+Rohan Das,Human Resources,60500,Kolkata,2021-01-18
+Kiara Fernandes,Product,94000,Mumbai,2024-05-20
+Ishaan Chatterjee,Finance,76000,Kolkata,2019-03-11
+Avni Patel,Sales,62500,Surat,2022-12-05
+Yash Tiwari,Engineering,80000,Lucknow,2023-02-27
+Meera Krishnan,Marketing,69000,Chennai,2020-04-20
+Dev Malhotra,Operations,67000,Gurugram,2021-08-23
+Tara Mukherjee,Human Resources,64500,Kolkata,2024-02-12
+Om Prakash,Finance,72000,Jaipur,2019-10-07
+Riya Saxena,Product,91000,Noida,2022-06-13
+Neil D'Souza,Sales,64000,Mumbai,2023-07-17
+Zoya Ali,Engineering,82500,Hyderabad,2020-01-27
+Kunal Arora,Operations,66000,Delhi,2021-12-13
+Pihu Jain,Marketing,70500,Jaipur,2024-04-01
+Siddharth Roy,Finance,75500,Bengaluru,2019-05-06
+Aditi Bansal,Human Resources,63000,Chandigarh,2022-03-21
+Manav Pillai,Product,89500,Kochi,2023-11-06
+Sia Choudhary,Engineering,81500,Chandigarh,2020-09-14
+Parth Goyal,Sales,61500,Noida,2021-04-12
+Nisha Yadav,Operations,68000,Lucknow,2024-06-03
+Rudra Sen,Marketing,69500,Kolkata,2022-01-31
+Tanya Oberoi,Finance,77000,Delhi,2019-08-19
+Veer Anand,Engineering,84500,Gurugram,2023-05-15
+Ira Mathur,Human Resources,65000,Jaipur,2020-12-07
+Samar Qureshi,Sales,63500,Hyderabad,2021-06-28
+Mira Shetty,Product,93000,Bengaluru,2024-01-22
+Lakshya Khanna,Operations,69000,Chandigarh,2022-09-12
+Esha Ghosh,Marketing,72500,Kolkata,2023-03-06
+Varun Menon,Finance,78500,Chennai,2020-07-20

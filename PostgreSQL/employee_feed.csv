@@ -1,0 +1,6 @@
+employee_code,employee_name,department,salary,city,joining_date
+E101," amit verma ",it,85000,Noida,2016-03-15
+E102,RAVI KUMAR,hr,92000,Delhi,2019-07-22
+E102,Ravi Kumar,hr,95000,Delhi,2019-07-22
+E103,,finance,78000,Mumbai,2018-11-01
+E104,Neha Singh,it,,Pune,2020-08-30

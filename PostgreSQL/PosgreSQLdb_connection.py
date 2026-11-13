@@ -25,7 +25,7 @@ def connect_to_postgresql(): # Whenever Python code needs to connect to the Post
         raise
 
 @contextmanager
-def db_cursor(commit=True): 
+def db_cursor(commit=True): #commit=true 
     conn = connect_to_postgresql()          # must raise on failure
     try:
         with conn.cursor() as cur:
