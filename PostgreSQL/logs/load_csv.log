@@ -8,3 +8,74 @@
 2026-11-14 21:15:29,672 - INFO - Count of records in stg_employee_feed: 1
 2026-11-14 21:15:29,672 - INFO - Count of records in stg_employee_feed: 1
 2026-11-14 21:15:29,672 - INFO - Count of records in stg_employee_feed: 1
+2026-11-14 21:29:40,360 - INFO - Record with employee_code E101 already exists in stg_employee_feed. Skipping insertion.
+2026-11-14 21:29:40,361 - INFO - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-14 21:29:40,361 - INFO - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-14 21:29:40,361 - INFO - Record with employee_code E103 already exists in stg_employee_feed. Skipping insertion.
+2026-11-14 21:29:40,362 - INFO - Record with employee_code E104 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 11:39:36,484 - INFO - CSV Processing started.
+2026-11-15 11:39:36,851 - WARNING - Record with employee_code E101 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 11:39:36,852 - WARNING - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 11:39:36,852 - WARNING - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 11:39:36,852 - WARNING - Record with employee_code E103 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 11:39:36,853 - WARNING - Record with employee_code E104 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 11:39:36,853 - INFO - CSV Processing completed.
+2026-11-15 12:06:20,049 - INFO - CSV Processing started.
+2026-11-15 12:06:20,127 - WARNING - Record with employee_code E101 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:20,127 - WARNING - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:20,127 - WARNING - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:20,127 - WARNING - Record with employee_code E103 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:20,127 - WARNING - Record with employee_code E104 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:20,128 - INFO - CSV Processing completed.
+2026-11-15 12:06:44,890 - INFO - CSV Processing started.
+2026-11-15 12:06:44,935 - WARNING - Record with employee_code E101 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:44,935 - WARNING - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:44,935 - WARNING - Record with employee_code E102 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:44,935 - WARNING - Record with employee_code E103 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:44,936 - WARNING - Record with employee_code E104 already exists in stg_employee_feed. Skipping insertion.
+2026-11-15 12:06:44,936 - INFO - CSV Processing completed.
+2026-11-18 20:46:46,700 - INFO - CSV Processing started.
+2026-11-18 20:46:46,977 - ERROR - An error occurred: no results to fetch
+2026-11-18 20:47:03,199 - INFO - CSV Processing started.
+2026-11-18 20:47:03,250 - ERROR - An error occurred: no results to fetch
+2026-11-18 20:49:46,923 - INFO - CSV Processing started.
+2026-11-18 20:49:46,972 - INFO - Inserting record with employee_code E101.
+2026-11-18 20:49:46,984 - INFO - Inserting record with employee_code E102.
+2026-11-18 20:49:46,986 - INFO - Inserting record with employee_code E102.
+2026-11-18 20:49:46,994 - ERROR - An error occurred: duplicate key value violates unique constraint "employee_dim_pkey"
+DETAIL:  Key (employee_code)=(E102) already exists.
+
+2026-11-18 20:52:00,183 - INFO - CSV Processing started.
+2026-11-18 20:52:00,227 - INFO - Inserting record with employee_code E101.
+2026-11-18 20:52:00,235 - INFO - Inserting record with employee_code E102.
+2026-11-18 20:52:00,237 - INFO - Inserting record with employee_code E102.
+2026-11-18 20:52:00,240 - ERROR - An error occurred: duplicate key value violates unique constraint "employee_dim_pkey"
+DETAIL:  Key (employee_code)=(E102) already exists.
+
+2026-11-18 21:22:49,790 - INFO - CSV Processing started.
+2026-11-18 21:22:49,876 - INFO - Inserting record with employee_code E101.
+2026-11-18 21:22:49,886 - INFO - Inserting record with employee_code E102.
+2026-11-18 21:22:49,890 - INFO - Inserting record with employee_code E102.
+2026-11-18 21:22:49,891 - WARNING - Record with employee_code E102 already exists in employee_dim. Skipping insertion.
+2026-11-18 21:22:49,894 - WARNING - Record with employee_code E103 already exists in stg_employee_feed. Skipping insertion.
+2026-11-18 21:22:49,897 - INFO - Inserting record with employee_code E104.
+2026-11-18 21:22:49,901 - INFO - CSV Processing completed.
+2026-11-18 21:48:17,677 - INFO - CSV Processing started.
+2026-11-18 21:48:17,873 - INFO - Inserting record with employee_code E101.
+2026-11-18 21:48:17,879 - WARNING - Record with employee_code E101 already exists in employee_dim. Skipping insertion.
+2026-11-18 21:48:17,879 - INFO - Inserting record with employee_code E102.
+2026-11-18 21:48:17,880 - WARNING - Record with employee_code E102 already exists in employee_dim. Skipping insertion.
+2026-11-18 21:48:17,880 - INFO - Inserting record with employee_code E102.
+2026-11-18 21:48:17,880 - WARNING - Record with employee_code E102 already exists in employee_dim. Skipping insertion.
+2026-11-18 21:48:17,880 - WARNING - Employee name is empty for record with employee_code E103. Inserting into staging table.
+2026-11-18 21:48:17,885 - INFO - Inserting record with employee_code E104.
+2026-11-18 21:48:17,886 - WARNING - Record with employee_code E104 already exists in employee_dim. Skipping insertion.
+2026-11-18 21:48:17,894 - INFO - CSV Processing completed.
+2026-11-18 22:00:25,647 - INFO - CSV Processing started.
+2026-11-18 22:00:25,697 - INFO - Inserting record with employee_code E101.
+2026-11-18 22:00:25,703 - INFO - Inserting record with employee_code E102.
+2026-11-18 22:00:25,703 - INFO - Inserting record with employee_code E102.
+2026-11-18 22:00:25,704 - WARNING - Record with employee_code E102 already exists in employee_dim. Skipping insertion.
+2026-11-18 22:00:25,704 - WARNING - Employee name is empty for record with employee_code E103. Inserting into staging table.
+2026-11-18 22:00:25,705 - INFO - Inserting record with employee_code E104.
+2026-11-18 22:00:25,709 - INFO - CSV Processing completed.
