@@ -12,24 +12,37 @@ logging.basicConfig(filename=log_path, level=logging.INFO, filemode='a', format=
 #logging.error("This is an error message")
 
 def select_count(cur, row):
-    cur.execute("SELECT COUNT(*) FROM stg_employee_feed WHERE employee_code = %s", (row['employee_code'],))    
-    fetched_count = cur.fetchone()[0]  # fetchone() retrieves the first row of the result set, and [0] accesses the first column (the count value).
-    print(f"Count of records in stg_employee_feed: {fetched_count}")
-    logging.info(f"Count of records in stg_employee_feed: {fetched_count}")
-    if fetched_count == 0:
+    #cur.execute("TRUNCATE TABLE stg_employee_feed")  # Clear the staging table before inserting new records.
+    #fetched_count = cur.fetchone()[0]  # fetchone() retrieves the first row of the result set, and [0] accesses the first column (the count value).
+    if not row['employee_name']:
+        logging.warning(f"Employee name is empty for record with employee_code {row['employee_code']}. Inserting into staging table.")
         cur.execute("INSERT INTO stg_employee_feed (employee_code, employee_name, department, salary, city, joining_date) VALUES (%s, %s, %s, %s, %s, %s)",
-                    (row['employee_code'], row['employee_name'], row['department'], row['salary'].strip() or None, row['city'], row['joining_date'])
-                                        )
-            
-with open(file_path, "r", newline='', encoding='utf-8') as file:
-    #reader = csv.reader(file)
-    reader = csv.DictReader(file)  # DictReader reads the CSV file and returns each row as a dictionary, where the keys are the column headers and the values are the corresponding data for that row.
-    with db_cursor() as cur:
-        for row in reader:
-            select_count(cur, row)  # Pass the cursor and the current row to the select_count function for processing.
-            print(row)  # row is a standard list: ['Alice', 'Engineer', 'IT']
+                            (row['employee_code'], row['employee_name'], row['department'], row['salary'].strip() or None, row['city'], row['joining_date']))
+    else:
+        logging.info(f"Inserting record with employee_code {row['employee_code']}.")
+        cur.execute("INSERT INTO employee_dim(employee_code, employee_name, department,salary, city , joining_date) VALUES (%s, %s, %s, %s, %s, %s) on conflict (employee_code) do nothing",
+                            (row['employee_code'], row['employee_name'], row['department'], row['salary'].strip() or None, row['city'], row['joining_date']))
+        if cur.rowcount == 0:
+            logging.warning(f"Record with employee_code {row['employee_code']} already exists in employee_dim. Skipping insertion.")
 
-    
+def main():            
+    with open(file_path, "r", newline='', encoding='utf-8') as file:
+        #reader = csv.reader(file)
+        logging.info("CSV Processing started.")
+        reader = csv.DictReader(file)  # DictReader reads the CSV file and returns each row as a dictionary, where the keys are the column headers and the values are the corresponding data for that row.
+        with db_cursor() as cur:
+            cur.execute("TRUNCATE TABLE stg_employee_feed")  # Clear the staging table before inserting new records.
+            for row in reader:
+                select_count(cur, row)  # Pass the cursor and the current row to the select_count function for processing.
+                #print(row)  # row is a standard list: ['Alice', 'Engineer', 'IT']
+
+        logging.info("CSV Processing completed.")
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        logging.error(f"An error occurred: {e}") 
             
 
 
